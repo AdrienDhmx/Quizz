@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizzBuilderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="18dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_nav_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginVertical="12dp"
+            android:text="@string/button_navigate_home"
+            app:iconPadding="6dp"
+            android:paddingRight="14dp"
+            android:onClick="backToHome"
+            style="@style/Widget.Material3.Button.IconButton">
+        </com.google.android.material.button.MaterialButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_difficulty"
+            android:layout_gravity="start"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:labelFor="@+id/difficulty_radio_group"/>
+        <RadioGroup
+            android:id="@+id/difficulty_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/easy_difficulty_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty_easy"
+                android:layout_marginEnd="12dp"
+                android:checked="true"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/hard_difficulty_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:text="@string/difficulty_hard"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_category"
+            android:layout_gravity="start"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:labelFor="@+id/category_spinner"/>
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_quantity"
+            android:layout_gravity="start"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:labelFor="@+id/quantity_spinner"/>
+        <Spinner
+            android:id="@+id/quantity_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/button_start_quizz"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:minWidth="120dp"
+            android:onClick="startQuizz"
+            android:text="@string/button_start_quizz"
+            android:theme="@style/PrimaryElevatedButton"  />
+
+        <Button
+            android:id="@+id/impossible_difficulty_button"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:onClick="startImpossibleQuizz"
+            android:theme="@style/TertiaryElevatedButton"
+            android:text="@string/button_start_impossible_quizz"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

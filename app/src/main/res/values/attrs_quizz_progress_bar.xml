@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="QuizzProgressBarItem">
+        <attr name="index" format="integer" />
+        <attr name="status" format="integer" />
+        <attr name="isCurrent" format="boolean" />
+    </declare-styleable>
+</resources>

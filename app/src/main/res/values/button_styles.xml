@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PrimaryElevatedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/primaryRoundedCorners</item>
+        <item name="elevation">1dp</item>
+        <item name="android:backgroundTint">@color/md_theme_primary</item>
+        <item name="android:textColor">@color/md_theme_onPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxWidth">300dp</item>
+    </style>
+
+    <style name="TertiaryElevatedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/primaryRoundedCorners</item>
+        <item name="elevation">1dp</item>
+        <item name="android:backgroundTint">@color/md_theme_tertiary</item>
+        <item name="android:textColor">@color/md_theme_onTertiary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxWidth">300dp</item>
+    </style>
+
+    <style name="primaryRoundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">6dp</item>
+        <item name="cornerSizeBottomLeft">6dp</item>
+        <item name="cornerSizeTopRight">6dp</item>
+        <item name="cornerSizeBottomRight">6dp</item>
+    </style>
+</resources>

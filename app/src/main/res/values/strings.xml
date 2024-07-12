@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Quizz</string>
+    <string name="welcome_message">Welcome %</string>
+    <string name="theme_light_mode">Light mode</string>
+    <string name="theme_dark_mode">Dark mode</string>
+
+    <string name="button_start_new_quizz">Start a new quizz</string>
+    <string name="button_start_quizz">Start quizz</string>
+    <string name="button_start_impossible_quizz">Start impossible quizz</string>
+    <string name="button_resume_quizz">Resume your quizz (%)</string>
+    <string name="button_submit">Submit</string>
+    <string name="button_next_question">Next question</string>
+    <string name="button_see_quizz_result">See results</string>
+    <string name="button_reset_questions">Reset Questions</string>
+    <string name="button_retry">Retry the Quizz</string>
+    <string name="button_navigate_home">Back to Home</string>
+    <string name="button_save_username">Save</string>
+
+    <string name="input_hint_username">Username</string>
+
+    <string name="score_title">Your score</string>
+    <string name="user_answer_hint">Your answer</string>
+
+    <string name="label_difficulty">Difficulty</string>
+    <string name="label_category">Category</string>
+    <string name="label_quantity">Number of questions</string>
+
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_impossible">Impossible</string>
+    <string name="difficulty_mix">All</string>
+
+    <string name="category_all">All</string>
+
+    <string name="result_difficulty_multiplier">Difficulty multiplier: %.2f</string>
+    <string name="result_question_number_multiplier">Number of questions multiplier: %.2f</string>
+    <string name="result_time_spend_multiplier">Speed multiplier: %.2f</string>
+
+    <string name="result_message_perfect_score">Congratulations %! You got a perfect score!</string>
+    <string name="result_message_great_score">Great job %! You got most of the answers right!</string>
+    <string name="result_message_good_score">Good effort %! You got more than half of the questions correct!</string>
+    <string name="result_message_ok_score">Not bad %! You got some of the questions right. Keep practicing!</string>
+    <string name="result_message_bad_score">Don\'t worry %, you\'ll do better next time! Keep learning and try again.</string>
+
+    <string name="result_message_incredible_score">Fantastic job! You\'ve achieved an outstanding score!</string>
+    <string name="result_message_impossible_quizz_unlocked">Congratulations! You\'ve unlocked the impossible difficulty!</string>
+
+    <string name="best_scores_difficulty_title">Best scores in % difficulty</string>
+    <string name="best_scores_all_title">Best scores</string>
+    <string name="best_scores_empty_title">Your best scores will appear here !</string>
+
+    <string name="quizz_option_card_icon_description">The icon representing the result status of the card.</string>
+</resources>

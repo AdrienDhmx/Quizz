@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+
+        <!-- Easy - History -->
+        <item name="prompt">Who was the first President of the United States?</item>
+        <item name="answer">George Washington</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Abraham Lincoln</item>
+        <item name="2">George Washington</item> 
+        <item name="3">RicHard Nixon</item> 
+        <item name="4">John Adams</item>
+
+        <item name="prompt">Who discovered America in 1492?</item>
+        <item name="answer">Christopher Columbus</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Vasco da Gama</item>
+        <item name="2">Ferdinand Magellan</item>
+        <item name="3">Christopher Columbus</item>
+        <item name="4">Marco Polo</item>
+
+        <item name="prompt">Who was known as the \'Maid of Orleans\'?</item>
+        <item name="answer">Joan of Arc</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Joan of Arc</item>
+        <item name="2">Marie Antoinette</item>
+        <item name="3">Cleopatra</item>
+        <item name="4">Queen Elizabeth I</item>
+
+        <item name="prompt">Who was the first man to walk on the moon?</item>
+        <item name="answer">Neil Armstrong</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Buzz Aldrin</item>
+        <item name="2">Yuri Gagarin</item>
+        <item name="3">Neil Armstrong</item>
+        <item name="4">Alan Shepard</item>
+
+        <item name="prompt">Who was the leader of the Soviet Union during most of World War II?</item>
+        <item name="answer">Joseph Stalin</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Vladimir Lenin</item>
+        <item name="2">Leon Trotsky</item>
+        <item name="3">Nikita Khrushchev</item>
+        <item name="4">Joseph Stalin</item>
+
+        <item name="prompt">Which ship famously sank after hitting an iceberg in 1912?</item>
+        <item name="answer">Titanic</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Titanic</item>
+        <item name="2">Lusitania</item>
+        <item name="3">Queen Mary</item>
+        <item name="4">Britannic</item>
+
+        <item name="prompt">Which ancient civilization built the Parthenon?</item>
+        <item name="answer">Ancient Greece</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Ancient Rome</item>
+        <item name="2">Ancient Egypt</item>
+        <item name="3">Ancient Greece</item>
+        <item name="4">Ancient Persia</item>
+
+        <item name="prompt">Who was the famous civil rights leader who delivered the \'I Have a Dream\' speech?</item>
+        <item name="answer">Martin Luther King Jr.</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Malcolm X</item>
+        <item name="2">Martin Luther King Jr.</item>
+        <item name="3">Rosa Parks</item>
+        <item name="4">Frederick Douglass</item>
+
+        <item name="prompt">Which event triggered the start of World War I?</item>
+        <item name="answer">Assassination of Archduke Franz Ferdinand</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Treaty of Versailles</item>
+        <item name="2">Battle of the Somme</item>
+        <item name="3">Assassination of Archduke Franz Ferdinand</item>
+        <item name="4">Invasion of Poland</item>
+
+        <item name="prompt">Which event marked the end of the Napoleonic Wars in Europe?</item>
+        <item name="answer">Battle of Waterloo</item>
+        <item name="category">History</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Battle of Trafalgar</item>
+        <item name="2">Treaty of Amiens</item>
+        <item name="3">Congress of Vienna</item>
+        <item name="4">Battle of Waterloo</item>
+
+        <!-- Easy - Geography -->
+        <item name="prompt">What is the capital city of Japan?</item> 
+        <item name="answer">Tokyo</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Beijing</item> 
+        <item name="2">Paris</item> 
+        <item name="3">Tokyo</item> 
+        <item name="4">Seoul</item>
+
+        <item name="prompt">What is the largest lake in the world?</item>
+        <item name="answer">Caspian Sea</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Lake Superior</item>
+        <item name="2">Lake Victoria</item>
+        <item name="3">Lake Baikal</item>
+        <item name="4">Caspian Sea</item>
+
+        <item name="prompt">What is the highest mountain in the world?</item>
+        <item name="answer">Mount Everest</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">K2</item>
+        <item name="2">Mount Everest</item>
+        <item name="3">Mount Kilimanjaro</item>
+        <item name="4">Denali</item>
+
+        <item name="prompt">What is the longest river in the world?</item>
+        <item name="answer">Nile River</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Amazon River</item>
+        <item name="2">Yangtze River</item>
+        <item name="3">Nile River</item>
+        <item name="4">Mississippi River</item>
+
+        <item name="prompt">What is the name of the world\'s largest archipelago?</item>
+        <item name="answer">Indonesia</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Philippines</item>
+        <item name="2">Indonesia</item>
+        <item name="3">Japan</item>
+        <item name="4">New Zealand</item>
+
+        <item name="prompt">What is the capital city of Australia?</item>
+        <item name="answer">Canberra</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Sydney</item>
+        <item name="2">Canberra</item>
+        <item name="3">Melbourne</item>
+        <item name="4">Brisbane</item>
+
+        <item name="prompt">What is the name of the world\'s longest mountain range?</item>
+        <item name="answer">Andes</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Andes</item>
+        <item name="2">Himalayas</item>
+        <item name="3">Rockies</item>
+        <item name="4">Urals</item>
+
+        <item name="prompt">Which canal connects the Atlantic Ocean to the Pacific Ocean?</item>
+        <item name="answer">Panama Canal</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Kiel Canal</item>
+        <item name="2">Suez Canal</item>
+        <item name="3">Panama Canal</item>
+        <item name="4">Erie Canal</item>
+
+        <item name="prompt">Where is Mount Everest located?</item>
+        <item name="answer">Nepal</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Nepal</item>
+        <item name="2">China</item>
+        <item name="3">India</item>
+        <item name="4">Tibet</item>
+
+        <item name="prompt">Which city is known as the \'City of Seven Hills\'?</item>
+        <item name="answer">Rome</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Athens</item>
+        <item name="2">Florence</item>
+        <item name="3">Lisbon</item>
+        <item name="4">Rome</item>
+
+        <!-- Easy - Science -->
+        <item name="prompt">Who developed the theory of relativity?</item>
+        <item name="answer">Albert Einstein</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Albert Einstein</item>
+        <item name="2">Isaac Newton</item>
+        <item name="3">Nikola Tesla</item>
+        <item name="4">Galileo Galilei</item>
+
+        <item name="prompt">What is the chemical symbol for water?</item>
+        <item name="answer">H2O</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">CO2</item>
+        <item name="2">O2</item>
+        <item name="3">H2</item>
+        <item name="4">H2O</item>
+
+        <item name="prompt">What is the largest planet in our solar system?</item>
+        <item name="answer">Jupiter</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Saturn</item>
+        <item name="2">Mars</item>
+        <item name="3">Jupiter</item>
+        <item name="4">Venus</item>
+
+        <item name="prompt">What is the name of the process by which plants convert light energy into chemical energy?</item>
+        <item name="answer">Photosynthesis</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Respiration</item>
+        <item name="2">Photosynthesis</item>
+        <item name="3">Decomposition</item>
+        <item name="4">Fermentation</item>
+
+        <item name="prompt">What is the study of living things called?</item>
+        <item name="answer">Biology</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Chemistry</item>
+        <item name="2">Physics</item>
+        <item name="3">Biology</item>
+        <item name="4">Geology</item>
+
+        <item name="prompt">What is the force that keeps objects moving in a straight line at a constant speed?</item>
+        <item name="answer">Inertia</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Friction</item>
+        <item name="2">Gravity</item>
+        <item name="3">Magnetism</item>
+        <item name="4">Inertia</item>
+
+        <item name="prompt">What is the hardest natural substance on Earth?</item>
+        <item name="answer">Diamond</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Diamond</item>
+        <item name="2">Steel</item>
+        <item name="3">Quartz</item>
+        <item name="4">Graphite</item>
+
+        <item name="prompt">What part of an atom has a positive charge?</item>
+        <item name="answer">Proton</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Proton</item>
+        <item name="2">Neutron</item>
+        <item name="3">Electron</item>
+        <item name="4">Nucleus</item>
+
+        <item name="prompt">What is the nearest star to Earth, other than the Sun?</item>
+        <item name="answer">Proxima Centauri</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Alpha Centauri A</item>
+        <item name="2">Alpha Centauri B</item>
+        <item name="3">Proxima Centauri</item>
+        <item name="4">Barnard\'s Star</item>
+
+        <item name="prompt">What is the process by which a solid changes directly into a gas?</item>
+        <item name="answer">Sublimation</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Sublimation</item>
+        <item name="2">Melting</item>
+        <item name="3">Freezing</item>
+        <item name="4">Boiling</item>
+
+        <!-- Easy - Sports -->
+        <item name="prompt">What sport is Michael Jordan famous for?</item>
+        <item name="answer">Basketball</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Baseball</item>
+        <item name="2">Soccer</item>
+        <item name="3">Tennis</item>
+        <item name="4">Basketball</item>
+
+        <item name="prompt">Which country hosts the Wimbledon tennis tournament?</item>
+        <item name="answer">United Kingdom</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">United Kingdom</item>
+        <item name="3">Australia</item>
+        <item name="4">France</item>
+        <item name="2">United States</item>
+
+        <item name="prompt">Which tennis player has won the most Grand Slam singles titles ?</item>
+        <item name="answer">Novak Djokovic</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Novak Djokovic</item>
+        <item name="2">Serena Williams</item>
+        <item name="3">Roger Federer</item>
+        <item name="4">Rafael Nadal</item>
+
+        <item name="prompt">How many players are there on a soccer team?</item>
+        <item name="answer">11</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">10</item>
+        <item name="2">9</item>
+        <item name="3">11</item>
+        <item name="4">12</item>
+
+        <item name="prompt">How many rings are there on the Olympic flag?</item>
+        <item name="answer">Five</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Five</item>
+        <item name="2">Four</item>
+        <item name="3">Six</item>
+        <item name="4">Seven</item>
+
+        <item name="prompt">Which sport is associated with the terms \'birdie\' and \'eagle\'?</item>
+        <item name="answer">Golf</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Baseball</item>
+        <item name="2">Golf</item>
+        <item name="3">Tennis</item>
+        <item name="4">Basketball</item>
+
+        <item name="prompt">What is the term for a score of one under par on a golf hole?</item>
+        <item name="answer">Birdie</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Birdie</item>
+        <item name="2">Eagle</item>
+        <item name="3">Bogey</item>
+        <item name="4">Par</item>
+
+        <item name="prompt">In which sport would you perform a slam dunk?</item>
+        <item name="answer">Basketball</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Easy</item>
+        <item name="1">Basketball</item>
+        <item name="2">Volleyball</item>
+        <item name="3">Tennis</item>
+        <item name="4">Soccer</item>
+
+        <!-- Hard - Sports -->
+        <item name="prompt">Which country won the FIFA World Cup in 2018?</item> 
+        <item name="answer">France</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">France</item>
+        <item name="2">Germany</item> 
+        <item name="3">Brazil</item> 
+        <item name="4">Portugal</item>
+
+        <item name="prompt">Which country won the first World Cup in 1930?</item>
+        <item name="answer">Uruguay</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Brazil</item>
+        <item name="2">Uruguay</item>
+        <item name="3">Argentina</item>
+        <item name="4">Germany</item>
+
+        <item name="prompt">Who holds the record for the most Olympic gold medals won by an individual athlete?</item>
+        <item name="answer">Michael Phelps</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Michael Phelps</item>
+        <item name="2">Usain Bolt</item>
+        <item name="3">Larisa Latynina</item>
+        <item name="4">Carl Lewis</item>
+
+        <item name="prompt">What is Usain Bolt\'s world record time for the 100 meters?</item>
+        <item name="answer">9.58 seconds</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">9.63 seconds</item>
+        <item name="2">9.65 seconds</item>
+        <item name="3">9.58 seconds</item>
+        <item name="4">9.72 seconds</item>
+
+        <item name="prompt">Which soccer player has scored the most goals in international competitions?</item>
+        <item name="answer">Cristiano Ronaldo</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Lionel Messi</item>
+        <item name="2">Cristiano Ronaldo</item>
+        <item name="3">Pelé</item>
+        <item name="4">Miroslav Klose</item>
+
+        <item name="prompt">Which country won the most medals at the 2008 Summer Olympics?</item>
+        <item name="answer">China</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">China</item>
+        <item name="2">United States</item>
+        <item name="3">Russia</item>
+        <item name="4">United Kingdom</item>
+
+        <item name="prompt">Who is the only boxer to have won titles in eight different weight divisions?</item>
+        <item name="answer">Manny Pacquiao</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Floyd Mayweather Jr.</item>
+        <item name="2">Oscar De La Hoya</item>
+        <item name="3">Sugar Ray Leonard</item>
+        <item name="4">Manny Pacquiao</item>
+
+        <item name="prompt">Who holds the record for the most points scored in a single NBA game?</item>
+        <item name="answer">Wilt Chamberlain</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Wilt Chamberlain</item>
+        <item name="2">Michael Jordan</item>
+        <item name="3">Kobe Bryant</item>
+        <item name="4">LeBron James</item>
+
+        <item name="prompt">Which country has won the most Rugby World Cups?</item>
+        <item name="answer">New Zealand</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Australia</item>
+        <item name="2">South Africa</item>
+        <item name="3">England</item>
+        <item name="4">New Zealand</item>
+
+        <item name="prompt">Who was the first athlete to run the marathon distance of 42.195 kilometers in under two hours?</item>
+        <item name="answer">Eliud Kipchoge</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Eliud Kipchoge</item>
+        <item name="2">Kenenisa Bekele</item>
+        <item name="3">Haile Gebrselassie</item>
+        <item name="4">Mo Farah</item>
+
+        <item name="prompt">Who was the first woman to run a marathon in under 2 hours 20 minutes?</item>
+        <item name="answer">Paula Radcliffe</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Paula Radcliffe</item>
+        <item name="2">Joan Benoit</item>
+        <item name="3">Grete Waitz</item>
+        <item name="4">Mary Keitany</item>
+
+        <item name="prompt">Who was the first NBA player to record a triple-double in an All-Star game?</item>
+        <item name="answer">Michael Jordan</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Larry Bird</item>
+        <item name="2">Michael Jordan</item>
+        <item name="3">LeBron James</item>
+        <item name="4">Magic Johnson</item>
+
+
+        <!-- Hard - History -->
+        <item name="prompt">Which historical event happened in 1066 in England?</item>
+        <item name="answer">Battle of Hastings</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Battle of Hastings</item>
+        <item name="2">Magna Carta</item>
+        <item name="3">War of the Roses</item>
+        <item name="4">English Civil War</item>
+
+        <item name="prompt">Who was the last pharaoh of ancient Egypt?</item>
+        <item name="answer">Cleopatra</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Ramesses II</item>
+        <item name="2">Cleopatra</item>
+        <item name="3">Hatshepsut</item>
+        <item name="4">Akhenaten</item>
+
+        <item name="prompt">Which battle is considered the turning point of World War II in Europe?</item>
+        <item name="answer">Battle of Stalingrad</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Battle of Stalingrad</item>
+        <item name="2">Battle of Midway</item>
+        <item name="3">D-Day (Normandy Landings)</item>
+        <item name="4">Battle of the Bulge</item>
+
+        <item name="prompt">Who was the Chinese emperor who unified China and started the construction of the Great Wall?</item>
+        <item name="answer">Qin Shi Huang</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Mao Zedong</item>
+        <item name="2">Confucius</item>
+        <item name="3">Qin Shi Huang</item>
+        <item name="4">zhu yuanzhang</item>
+
+        <item name="prompt">Which event triggered the start of the French Revolution in 1789?</item>
+        <item name="answer">Storming of the Bastille</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Tennis Court Oath</item>
+        <item name="2">Execution of Louis XVI</item>
+        <item name="3">Reign of Terror</item>
+        <item name="4">Storming of the Bastille</item>
+
+        <item name="prompt">Which event marked the end of the Hundred Years\' War between England and France?</item>
+        <item name="answer">Battle of Castillon</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Battle of Agincourt</item>
+        <item name="2">Battle of Castillon</item>
+        <item name="3">Siege of Orleans</item>
+        <item name="4">Battle of Crecy</item>
+
+        <item name="prompt">Who was the leader of the Chinese Communist Party during the Chinese Civil War and the founding of the People\'s Republic of China?</item>
+        <item name="answer">Mao Zedong</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Chiang Kai-shek</item>
+        <item name="2">Sun Yat-sen</item>
+        <item name="3">Mao Zedong</item>
+        <item name="4">Deng Xiaoping</item>
+
+        <item name="prompt">Who was the leader of the Viet Cong during the Vietnam War?</item>
+        <item name="answer">Ho Chi Minh</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Vo Nguyen Giap</item>
+        <item name="2">Ngo Dinh Diem</item>
+        <item name="3">Le Duan</item>
+        <item name="4">Ho Chi Minh</item>
+
+        <item name="prompt">Who was the leader of the Indian National Congress during India\'s struggle for independence from British rule?</item>
+        <item name="answer">Mahatma Gandhi</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Jawaharlal Nehru</item>
+        <item name="2">Muhammad Ali Jinnah</item>
+        <item name="3">Subhas Chandra Bose</item>
+        <item name="4">Mahatma Gandhi</item>
+
+        <item name="prompt">Who was the leader of the Nationalist forces during the Spanish Civil War?</item>
+        <item name="answer">Francisco Franco</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Manuel Azaña</item>
+        <item name="2">Dolores Ibárruri</item>
+        <item name="3">Francisco Franco</item>
+        <item name="4">José Antonio Primo de Rivera</item>
+
+        <item name="prompt">Which event marked the beginning of the end of apartheid in South Africa?</item>
+        <item name="answer">Release of Nelson Mandela from prison</item>
+        <item name="category">History</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Release of Nelson Mandela from prison</item>
+        <item name="2">Sharpeville Massacre</item>
+        <item name="3">Soweto Uprising</item>
+        <item name="4">End of the Boer War</item>
+
+        <!-- Hard - Geography -->
+        <item name="prompt">What is the largest and highest waterfall in the world?</item>
+        <item name="answer">Angel Falls</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Niagara Falls</item>
+        <item name="2">Victoria Falls</item>
+        <item name="3">Angel Falls</item>
+        <item name="4">Iguazu Falls</item>
+
+        <item name="prompt">Which African country is the largest by area?</item>
+        <item name="answer">Algeria</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Algeria</item>
+        <item name="2">Democratic Republic of the Congo</item>
+        <item name="3">Sudan</item>
+        <item name="4">Libya</item>
+
+        <item name="prompt">What is the name of the world\'s largest volcanic island?</item>
+        <item name="answer">Island of Hawaii</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Iceland</item>
+        <item name="2">Sicily</item>
+        <item name="3">Santorini</item>
+        <item name="4">Island of Hawaii</item>
+
+        <item name="prompt">Which city is located at the highest altitude in the world?</item>
+        <item name="answer">La Paz, Bolivia</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Lhasa, Tibet</item>
+        <item name="2">Quito, Ecuador</item>
+        <item name="3">Kathmandu, Nepal</item>
+        <item name="4">La Paz, Bolivia</item>
+
+        <item name="prompt">What country is Abuja the capital of?</item>
+        <item name="answer">Nigeria</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Ghana</item>
+        <item name="2">Nigeria</item>
+        <item name="3">Kenya</item>
+        <item name="4">South Africa</item>
+
+        <item name="prompt">What is the name of the world\'s largest freshwater lake by surface area?</item>
+        <item name="answer">Lake Superior</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Lake Victoria</item>
+        <item name="2">Lake Huron</item>
+        <item name="3">Lake Michigan</item>
+        <item name="4">Lake Superior</item>
+
+        <item name="prompt">What is the name of the world\'s largest sand desert?</item>
+        <item name="answer">Rub\' al Khali</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Sahara</item>
+        <item name="2">Gobi</item>
+        <item name="3">Rub\' al Khali</item>
+        <item name="4">Kalahari</item>
+
+        <item name="prompt">Which country has the most time zones?</item>
+        <item name="answer">France</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Russia</item>
+        <item name="2">United States</item>
+        <item name="3">China</item>
+        <item name="4">France</item>
+
+        <item name="prompt">What is the only sea without any coasts?</item>
+        <item name="answer">Sargasso Sea</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Sargasso Sea</item>
+        <item name="2">Coral Sea</item>
+        <item name="3">South China Sea</item>
+        <item name="4">Arafura Sea</item>
+
+        <item name="prompt">What is the name of the world\'s deepest canyon?</item>
+        <item name="answer">Cotahuasi Canyon</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Grand Canyon</item>
+        <item name="2">Cotahuasi Canyon</item>
+        <item name="3">Yarlung Tsangpo</item>
+        <item name="4">Colca Canyon</item>
+
+        <item name="prompt">What country is Vientiane the capital of?</item>
+        <item name="answer">Laos</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Cambodia</item>
+        <item name="2">Vietnam</item>
+        <item name="3">Thailand</item>
+        <item name="4">Laos</item>
+
+
+        <!-- Hard - Science -->
+        <item name="prompt">What is the chemical symbol for gold?</item>
+        <item name="answer">Au</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Co</item>
+        <item name="2">Ga</item>
+        <item name="3">Au</item>
+        <item name="4">Pb</item>
+
+        <item name="prompt">What is the term for the spontaneous emission of light by a substance not resulting from heat?</item>
+        <item name="answer">Bioluminescence</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Bioluminescence</item>
+        <item name="2">Fluorescence</item>
+        <item name="3">Incandescence</item>
+        <item name="4">Phosphorescence</item>
+
+        <item name="prompt">What is the process by which water moves through plants from roots to leaves?</item>
+        <item name="answer">Transpiration</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Photosynthesis</item>
+        <item name="2">Respiration</item>
+        <item name="3">Absorption</item>
+        <item name="4">Transpiration</item>
+
+        <item name="prompt">What is the layer of the Earth\'s atmosphere that contains the ozone layer?</item>
+        <item name="answer">Stratosphere</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Stratosphere</item>
+        <item name="2">Troposphere</item>
+        <item name="3">Mesosphere</item>
+        <item name="4">Thermosphere</item>
+
+        <item name="prompt">Which gland in the human body regulates metabolism?</item>
+        <item name="answer">Thyroid gland</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Pituitary gland</item>
+        <item name="2">Thyroid gland</item>
+        <item name="3">Adrenal gland</item>
+        <item name="4">Pancreas</item>
+
+        <item name="prompt">What is the name of the force that holds electrons in orbit around the nucleus of an atom?</item>
+        <item name="answer">Electromagnetic force</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Strong nuclear force</item>
+        <item name="2">Weak nuclear force</item>
+        <item name="3">Gravitational force</item>
+        <item name="4">Electromagnetic force</item>
+
+        <item name="prompt">What is the name of the process by which a protein is synthesized from amino acids according to the genetic code?</item>
+        <item name="answer">Translation</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Transcription</item>
+        <item name="2">Replication</item>
+        <item name="3">Translation</item>
+        <item name="4">Mutation</item>
+
+        <item name="prompt">What is the unit of measure for radioactivity?</item>
+        <item name="answer">Becquerel (Bq)</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Curie (Ci)</item>
+        <item name="2">Sievert (Sv)</item>
+        <item name="3">Becquerel (Bq)</item>
+        <item name="4">Gray (Gy)</item>
+
+        <item name="prompt">Which type of bond involves the sharing of electron pairs between atoms?</item>
+        <item name="answer">Covalent bond</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Ionic bond</item>
+        <item name="2">Covalent bond</item>
+        <item name="3">Hydrogen bond</item>
+        <item name="4">Metallic bond</item>
+
+        <item name="prompt">What is the name of the process by which a cell breaks down and recycles its own components?</item>
+        <item name="answer">Autophagy</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Apoptosis</item>
+        <item name="2">Necrosis</item>
+        <item name="3">Phagocytosis</item>
+        <item name="4">Autophagy</item>
+
+        <item name="prompt">What is the phenomenon where light bends as it passes from one medium to another?</item>
+        <item name="answer">Refraction</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Refraction</item>
+        <item name="2">Reflection</item>
+        <item name="3">Diffraction</item>
+        <item name="4">Interference</item>
+
+        <item name="prompt">What is the name of the process by which a molecule loses or gains one or more electrons to form an ion?</item>
+        <item name="answer">Ionization</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Hard</item>
+        <item name="1">Excitation</item>
+        <item name="2">Ionization</item>
+        <item name="3">Ionization energy</item>
+        <item name="4">Electron affinity</item>
+
+
+        <!-- Impossible Quizz -->
+        <item name="prompt">Which physicist is known for the uncertainty principle in quantum mechanics?</item>
+        <item name="answer">Werner Heisenberg</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Niels Bohr</item>
+        <item name="2">Albert Einstein</item>
+        <item name="3">Erwin Schrödinger</item>
+        <item name="4">Werner Heisenberg</item>
+
+        <item name="prompt">Which treaty ended the Thirty Years\' War in 1648?</item>
+        <item name="answer">Treaty of Westphalia</item>
+        <item name="category">History</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Treaty of Versailles</item>
+        <item name="2">Treaty of Utrecht</item>
+        <item name="3">Treaty of Westphalia</item>
+        <item name="4">Treaty of Paris</item>
+
+        <item name="prompt">Who was the founder of the Mongol Empire?</item>
+        <item name="answer">Genghis Khan</item>
+        <item name="category">History</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Genghis Khan</item>
+        <item name="2">Kublai Khan</item>
+        <item name="3">Attila the Hun</item>
+        <item name="4">Tamerlane</item>
+
+        <item name="prompt">What is the longest river in Asia?</item>
+        <item name="answer">Yangtze River</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Yangtze River</item>
+        <item name="2">Yellow River</item>
+        <item name="3">Mekong River</item>
+        <item name="4">Ganges River</item>
+
+        <item name="prompt">Who is the only tennis player to achieve a Golden Slam in a single year (winning all four Grand Slam tournaments and the Olympic gold medal in a single year)?</item>
+        <item name="answer">Steffi Graf</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Serena Williams</item>
+        <item name="2">Steffi Graf</item>
+        <item name="3">Margaret Court</item>
+        <item name="4">Rod Laver</item>
+
+        <item name="prompt">What is the oldest known musical instrument?</item>
+        <item name="answer">Flute</item>
+        <item name="category">History</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Lyre</item>
+        <item name="2">Drum</item>
+        <item name="3">Flute</item>
+        <item name="4">Harp</item>
+
+        <item name="prompt">What is the rarest naturally occurring element on Earth?</item>
+        <item name="answer">Astatine</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Francium</item>
+        <item name="2">Technetium</item>
+        <item name="3">Astatine</item>
+        <item name="4">Protactinium</item>
+
+        <item name="prompt">What is the capital city of Bhutan?</item>
+        <item name="answer">Thimphu</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Paro</item>
+        <item name="2">Thimphu</item>
+        <item name="3">Punakha</item>
+        <item name="4">Phuentsholing</item>
+
+        <item name="prompt">Which civilization is known for the construction of the city of Petra?</item>
+        <item name="answer">Nabateans</item>
+        <item name="category">History</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Romans</item>
+        <item name="2">Nabateans</item>
+        <item name="3">Assyrians</item>
+        <item name="4">Babylonians</item>
+
+        <item name="prompt">What is the name of the deepest part of the Atlantic Ocean?</item>
+        <item name="answer">Puerto Rico Trench</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Mariana Trench</item>
+        <item name="2">Java Trench</item>
+        <item name="3">Puerto Rico Trench</item>
+        <item name="4">Tonga Trench</item>
+
+        <item name="prompt">What is the name of the only natural satellite of Mars?</item>
+        <item name="answer">Phobos</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Phobos</item>
+        <item name="2">Deimos</item>
+        <item name="3">Ganymede</item>
+        <item name="4">Callisto</item>
+
+        <item name="prompt">Which ancient civilization built the city of Machu Picchu?</item>
+        <item name="answer">Inca</item>
+        <item name="category">History</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Maya</item>
+        <item name="2">Aztec</item>
+        <item name="3">Olmec</item>
+        <item name="4">Inca</item>
+
+        <item name="prompt">What is the smallest country by land area?</item>
+        <item name="answer">Vatican City</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Monaco</item>
+        <item name="2">Nauru</item>
+        <item name="3">Vatican City</item>
+        <item name="4">San Marino</item>
+
+        <item name="prompt">Which athlete holds the record for the most home runs in a single MLB season?</item>
+        <item name="answer">Barry Bonds</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Barry Bonds</item>
+        <item name="2">Hank Aaron</item>
+        <item name="3">Babe Ruth</item>
+        <item name="4">Mark McGwire</item>
+
+        <item name="prompt">Which element has the highest melting point?</item>
+        <item name="answer">Tungsten</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Titanium</item>
+        <item name="2">Tungsten</item>
+        <item name="3">Rhenium</item>
+        <item name="4">Osmium</item>
+
+        <item name="prompt">Who was the first European explorer to reach China by sea?</item>
+        <item name="answer">Vasco da Gama</item>
+        <item name="category">History</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Vasco da Gama</item>
+        <item name="2">Christopher Columbus</item>
+        <item name="3">Ferdinand Magellan</item>
+        <item name="4">Marco Polo</item>
+
+        <item name="prompt">What is the largest species of bear?</item>
+        <item name="answer">Polar bear</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Brown bear</item>
+        <item name="2">Black bear</item>
+        <item name="3">Sloth bear</item>
+        <item name="4">Polar bear</item>
+
+        <item name="prompt">Which ice hockey player has the most career goals?</item>
+        <item name="answer">Wayne Gretzky</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Mario Lemieux</item>
+        <item name="2">Gordie Howe</item>
+        <item name="3">Wayne Gretzky</item>
+        <item name="4">Brett Hull</item>
+
+        <item name="prompt">What is the largest moon in the Solar System?</item>
+        <item name="answer">Ganymede</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Ganymede</item>
+        <item name="2">Titan</item>
+        <item name="3">Europa</item>
+        <item name="4">Io</item>
+
+        <item name="prompt">What is the deepest lake in the world by volume?</item>
+        <item name="answer">Lake Baikal</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Lake Superior</item>
+        <item name="2">Lake Michigan</item>
+        <item name="3">Lake Baikal</item>
+        <item name="4">Lake Titicaca</item>
+
+        <item name="prompt">What is the official current world record for the longest ski jump?</item>
+        <item name="answer">253.5 meters</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">235.5 meters</item>
+        <item name="2">243.5 meters</item>
+        <item name="3">250.0 meters</item>
+        <item name="4">253.5 meters</item>
+
+        <item name="prompt">Which ancient civilization built the Terracotta Army?</item>
+        <item name="answer">Qin Dynasty</item>
+        <item name="category">History</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Han Dynasty</item>
+        <item name="2">Qin Dynasty</item>
+        <item name="3">Tang Dynasty</item>
+        <item name="4">Ming Dynasty</item>
+
+        <item name="prompt">Which country has the most number of official languages?</item>
+        <item name="answer">South Africa</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Canada</item>
+        <item name="2">India</item>
+        <item name="3">South Africa</item>
+        <item name="4">China</item>
+
+        <item name="prompt">Which scientist is known for developing the theory of plate tectonics?</item>
+        <item name="answer">Alfred Wegener</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Charles Darwin</item>
+        <item name="2">James Hutton</item>
+        <item name="3">Louis Agassiz</item>
+        <item name="4">Alfred Wegener</item>
+
+        <item name="prompt">Which scientist is known for developing the theory of quantum mechanics?</item>
+        <item name="answer">Max Planck</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Max Planck</item>
+        <item name="2">Erwin Schrödinger</item>
+        <item name="3">Werner Heisenberg</item>
+        <item name="4">Niels Bohr</item>
+
+        <item name="prompt">Which soccer player is known for scoring the most goals in a single World Cup tournament?</item>
+        <item name="answer">Just Fontaine</item>
+        <item name="category">Sports</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Gerd Müller</item>
+        <item name="2">Ronaldo</item>
+        <item name="3">Just Fontaine</item>
+        <item name="4">Miroslav Klose</item>
+
+        <item name="prompt">Which scientist is known for developing the theory of radioactivity?</item>
+        <item name="answer">Marie Curie</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Antoine Henri Becquerel</item>
+        <item name="2">Pierre Curie</item>
+        <item name="3">Marie Curie</item>
+        <item name="4">Ernest Rutherford</item>
+
+        <item name="prompt">Which historical figure is known for leading the Soviet Union during the Space Race?</item>
+        <item name="answer">Nikita Khrushchev</item>
+        <item name="category">History</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Joseph Stalin</item>
+        <item name="2">Leonid Brezhnev</item>
+        <item name="3">Nikita Khrushchev</item>
+        <item name="4">Mikhail Gorbachev</item>
+
+        <item name="prompt">What is the highest mountain peak in Europe?</item>
+        <item name="answer">Mount Elbrus</item>
+        <item name="category">Geography</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Mont Blanc</item>
+        <item name="2">Mount Elbrus</item>
+        <item name="3">Matterhorn</item>
+        <item name="4">Mount Olympus</item>
+
+        <item name="prompt">Which scientist is known for developing the theory of the structure of the atom?</item>
+        <item name="answer">Niels Bohr</item>
+        <item name="category">Science</item>
+        <item name="difficulty">Impossible</item>
+        <item name="1">Ernest Rutherford</item>
+        <item name="2">James Chadwick</item>
+        <item name="3">Niels Bohr</item>
+        <item name="4">Max Planck</item>
+    </string-array>
+</resources>

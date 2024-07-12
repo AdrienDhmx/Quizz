@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="quizz_option_card">
+        <attr name="answerOption" format="string" />
+        <attr name="isSelected" format="boolean" />
+        <attr name="resultStatus" format="integer" />
+    </declare-styleable>
+</resources>

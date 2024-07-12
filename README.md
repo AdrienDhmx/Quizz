@@ -12,7 +12,7 @@
 - Sélection aléatoire des questions
 - Ordre aléatoire des choix des questions
 - bar de progression avec le status des questions (correct, incorrect, en cours, non passé)
-- Chronomètre du temps passé sur chaque question
+- Chronomètre du temps total passé (mis en pause pendant la phase de vérification)
 - Calcule du score en fonction
   - du nombre de bonne réponse
   - de la difficulté

@@ -79,8 +79,7 @@ public class QuizzActivity extends AppCompatActivity {
         questions = ArrayListUtils.mapTo(tempQuestionArray, (o) -> (Question)o);
 
         if(questions.isEmpty()) {
-            Toast.makeText(this, "Erreur", Toast.LENGTH_LONG).show();
-            onNavigateUp();
+            finish();
             return;
         }
 

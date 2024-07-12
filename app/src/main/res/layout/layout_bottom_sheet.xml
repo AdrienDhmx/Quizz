@@ -20,10 +20,7 @@
             android:id="@+id/username_input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            app:boxStrokeColor="@color/md_theme_primary"
-            app:hintTextColor="@color/md_theme_primary"
-            app:cursorColor="@color/md_theme_primary">
+            android:gravity="center_horizontal">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username_input"

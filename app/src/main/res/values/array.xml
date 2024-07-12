@@ -496,7 +496,7 @@
         <item name="4">zhu yuanzhang</item>
 
         <item name="prompt">Which event triggered the start of the French Revolution in 1789?</item>
-        <item name="answer">Storming of the Bastille</item>
+        <item name="answer">Tennis Court Oath</item>
         <item name="category">History</item>
         <item name="difficulty">Hard</item>
         <item name="1">Tennis Court Oath</item>
@@ -677,15 +677,6 @@
         <item name="2">Fluorescence</item>
         <item name="3">Incandescence</item>
         <item name="4">Phosphorescence</item>
-
-        <item name="prompt">What is the process by which water moves through plants from roots to leaves?</item>
-        <item name="answer">Transpiration</item>
-        <item name="category">Science</item>
-        <item name="difficulty">Hard</item>
-        <item name="1">Photosynthesis</item>
-        <item name="2">Respiration</item>
-        <item name="3">Absorption</item>
-        <item name="4">Transpiration</item>
 
         <item name="prompt">What is the layer of the Earth\'s atmosphere that contains the ozone layer?</item>
         <item name="answer">Stratosphere</item>

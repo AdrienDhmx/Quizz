@@ -9,12 +9,14 @@ import android.widget.LinearLayout;
 import androidx.cardview.widget.CardView;
 
 import com.correctink.quizz.R;
+import com.correctink.quizz.enums.QuizzOptionStatus;
+import com.correctink.quizz.utils.ResourceUtils;
 
 public class QuizzProgressBarItem extends CardView {
 
     private int index = 0; // position in the progress bar (used by the owner to identify each bar)
 
-    private int status = 0; // Correct, Wrong, Not answered
+    private QuizzOptionStatus status = QuizzOptionStatus.notAnswered;
 
     private boolean isCurrent = false;
 
@@ -40,7 +42,8 @@ public class QuizzProgressBarItem extends CardView {
 
         index = a.getInt(R.styleable.QuizzProgressBarItem_index, 0);
 
-        status = a.getInt(R.styleable.QuizzProgressBarItem_status, 0);
+        final int statusIndex = a.getInt(R.styleable.QuizzProgressBarItem_status, 0);
+        status = QuizzOptionStatus.values()[statusIndex];
 
         isCurrent = a.getBoolean(R.styleable.QuizzProgressBarItem_isCurrent, false);
 
@@ -59,22 +62,18 @@ public class QuizzProgressBarItem extends CardView {
         this.index = index;
     }
 
-    public int getStatus() {
+    public QuizzOptionStatus getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(QuizzOptionStatus status) {
         this.status = status;
+        int color = ResourceUtils.getColor(this.getContext(), R.color.md_theme_surfaceContainer);
 
-        final Resources res = getResources();
-        final Resources.Theme currentTheme = getContext().getTheme();
-
-        int color = res.getColor(R.color.md_theme_surfaceContainer, currentTheme);
-
-        if(status == 1) {
-            color = res.getColor(R.color.md_theme_primary, currentTheme);
-        } else if(status == 2) {
-            color = res.getColor(R.color.md_theme_error, currentTheme);
+        if(status == QuizzOptionStatus.correct) {
+            color = ResourceUtils.getColor(this.getContext(), R.color.md_theme_primary);
+        } else if(status == QuizzOptionStatus.wrong) {
+            color = ResourceUtils.getColor(this.getContext(), R.color.md_theme_error);
         }
 
         setCardBackgroundColor(color);
@@ -94,7 +93,7 @@ public class QuizzProgressBarItem extends CardView {
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, 24, 2);
             layoutParams.setMargins(4, 0, 4, 0);
             setLayoutParams(layoutParams);
-        } else if(status == 0) {
+        } else if(status == QuizzOptionStatus.notAnswered) {
             setCardBackgroundColor(res.getColor(R.color.md_theme_surfaceContainer, currentTheme));
         }
 

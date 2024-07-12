@@ -18,15 +18,13 @@ import java.util.ArrayList;
 
 public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHolder> {
     private final ArrayList<QuizzScore> scores;
-
-    private final String currentDateScore;
-
+    private final QuizzScore selectedScore;
     private LayoutInflater inflater;
 
-    public ScoreAdapter(Context context, ArrayList<QuizzScore> scores, String currentDateScore) {
+    public ScoreAdapter(Context context, ArrayList<QuizzScore> scores, QuizzScore selectedScore) {
         this.inflater = LayoutInflater.from(context);
         this.scores = scores;
-        this.currentDateScore = currentDateScore;
+        this.selectedScore = selectedScore;
     }
 
     @NonNull
@@ -40,11 +38,12 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHol
     public void onBindViewHolder(@NonNull ScoreViewHolder holder, int position) {
         QuizzScore score = scores.get(position);
 
-        holder.date.setText(score.getDate());
+        holder.player.setText(score.getPlayerName());
+        holder.difficulty.setText(score.getDifficulty());
         holder.correctAnswerCount.setText(String.format("%d / %d", score.getCorrectAnswersCount(), score.getTotalQuestionCount()));
         holder.finalScore.setText(String.format("%.2f", score.getFinalScore()));
 
-        holder.setIsCurrentDateScore(score.getDate().equals(currentDateScore));
+        holder.setIsCurrentDateScore(score.equals(selectedScore));
     }
 
     @Override
@@ -53,11 +52,12 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHol
     }
 
     static class ScoreViewHolder extends RecyclerView.ViewHolder {
-        TextView date, correctAnswerCount, finalScore;
+        TextView player, difficulty, correctAnswerCount, finalScore;
 
         ScoreViewHolder(@NonNull View itemView) {
             super(itemView);
-            date = itemView.findViewById(R.id.score_date);
+            player = itemView.findViewById(R.id.score_player);
+            difficulty = itemView.findViewById(R.id.score_difficulty);
             correctAnswerCount = itemView.findViewById(R.id.score_correctAnswerCount);
             finalScore = itemView.findViewById(R.id.score_finalScore);
         }

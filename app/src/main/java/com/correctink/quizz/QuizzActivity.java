@@ -1,12 +1,17 @@
 package com.correctink.quizz;
 
 import android.content.Intent;
+import android.media.AudioAttributes;
 import android.os.Bundle;
 import android.os.Handler;
+import android.speech.tts.TextToSpeech;
+import android.speech.tts.Voice;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,35 +21,32 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.correctink.quizz.components.QuizzOptionCard;
 import com.correctink.quizz.components.QuizzProgressBarItem;
+import com.correctink.quizz.enums.QuizzOptionStatus;
+import com.correctink.quizz.enums.SharedPreferencesKeys;
 import com.correctink.quizz.models.Answer;
 import com.correctink.quizz.models.Question;
 import com.correctink.quizz.utils.ArrayListUtils;
+import com.correctink.quizz.utils.ResourceUtils;
 import com.correctink.quizz.utils.SharedPreferencesUtils;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Locale;
 
 public class QuizzActivity extends AppCompatActivity {
     private int currentQuestionNumber = 0;
-
     private Question currentQuestion;
-
     private ArrayList<Answer> answers;
-
     private ArrayList<Question> questions;
-
-    private QuizzOptionCard selectedOption;
-
-    private ArrayList<QuizzProgressBarItem> progressBarItems = new ArrayList<QuizzProgressBarItem>();
-
+    private final ArrayList<QuizzProgressBarItem> progressBarItems = new ArrayList<QuizzProgressBarItem>();
     private Handler stopWatchHandler;
     private long startTime;
-
     private long previousPauseTime;
-
     private long currentQuestionTimeSpend = 0;
     private long pauseTime;
     private boolean isStopWatchRunning = false;
-
     private TextView stopWatchTextView;
 
     private final Runnable updateStopWatchRunnable = new Runnable() {
@@ -76,6 +78,12 @@ public class QuizzActivity extends AppCompatActivity {
         final ArrayList<Object> tempQuestionArray = (ArrayList<Object>)getIntent().getSerializableExtra("questions");
         questions = ArrayListUtils.mapTo(tempQuestionArray, (o) -> (Question)o);
 
+        if(questions.isEmpty()) {
+            Toast.makeText(this, "Erreur", Toast.LENGTH_LONG).show();
+            onNavigateUp();
+            return;
+        }
+
         final ArrayList<Object> tempAnswerArray = (ArrayList<Object>)getIntent().getSerializableExtra("currentQuizzAnswers");
         if(tempAnswerArray != null && !tempAnswerArray.isEmpty()) {
             answers = ArrayListUtils.mapTo(tempAnswerArray, (o) -> (Answer)o);
@@ -84,27 +92,36 @@ public class QuizzActivity extends AppCompatActivity {
             answers = new ArrayList<Answer>();
         }
 
-        if(currentQuestionNumber >= questions.size()) {
-            currentQuestionNumber = 0;
-        }
         currentQuestion = questions.get(currentQuestionNumber);
 
         final QuizzOptionCard[] options = getQuizzOptions();
         for(QuizzOptionCard option : options) {
             option.setOnClickListener((e) -> {
-                setSelectedQuizzOption((QuizzOptionCard) e);
+                onSelectedOption((QuizzOptionCard) e);
             });
         }
 
+        stopWatchTextView = findViewById(R.id.stopwatch_text);
+        stopWatchHandler = new Handler();
+        // initialize the start time now to be able to decrease it
+        // by the amount of time already spend in previous questions (if there are passed answers)
+        startStopwatch();
+
+        // create the progress bar with the correct states
+        // and decrease the start time by each answer's timeSpend
         final LinearLayout progressbarLayout = findViewById(R.id.progress_layout);
         for(int i = 0; i < questions.size(); ++i) {
             final QuizzProgressBarItem progressBarItem = new QuizzProgressBarItem(this);
             progressbarLayout.addView(progressBarItem);
 
             progressBarItem.setIndex(i);
-            if(i < answers.size()) { // when resuming a quizz
+            if(i < answers.size()) { // when resuming a quizz make sure the previous progress bar item have the correct state
                 final Answer answer = answers.get(i);
-                progressBarItem.setStatus(answer.getIsCorrect() ? 1 : 2);
+                progressBarItem.setStatus(answer.getIsCorrect()
+                        ? QuizzOptionStatus.correct
+                        : QuizzOptionStatus.wrong
+                );
+                startTime -= answer.getTimeSpend();
             } else if(i == currentQuestionNumber) {
                 progressBarItem.setIsCurrent(true);
             }
@@ -112,11 +129,8 @@ public class QuizzActivity extends AppCompatActivity {
             progressBarItems.add(progressBarItem);
         }
 
+        disableSubmitButton();
         updateViewWithCurrentQuestion();
-
-        stopWatchTextView = findViewById(R.id.stopwatch_text);
-        stopWatchHandler = new Handler();
-        startStopwatch();
     }
 
     private void startStopwatch() {
@@ -154,21 +168,15 @@ public class QuizzActivity extends AppCompatActivity {
     }
 
     private QuizzOptionCard[] getQuizzOptions() {
-        final QuizzOptionCard option1 = findViewById(R.id.option_1);
-        final QuizzOptionCard option2 = findViewById(R.id.option_2);
-        final QuizzOptionCard option3 = findViewById(R.id.option_3);
-        final QuizzOptionCard option4 = findViewById(R.id.option_4);
-
-        QuizzOptionCard[] options = new QuizzOptionCard[] {
-                option1,
-                option2,
-                option3,
-                option4,
+        return new QuizzOptionCard[] {
+                findViewById(R.id.option_1),
+                findViewById(R.id.option_2),
+                findViewById(R.id.option_3),
+                findViewById(R.id.option_4),
         };
-        return options;
     }
 
-    private void setSelectedQuizzOption(QuizzOptionCard selectedOption) {
+    private void onSelectedOption(QuizzOptionCard selectedOption) {
         if(answers.size() > currentQuestionNumber) { // answer already submitted
             return;
         }
@@ -176,8 +184,9 @@ public class QuizzActivity extends AppCompatActivity {
         for(QuizzOptionCard option : getQuizzOptions()) {
             option.setIsSelected(false);
         }
-        this.selectedOption = selectedOption;
         selectedOption.setIsSelected(true);
+
+        enableSubmitButton();
     }
 
     public void onSubmit(View view) {
@@ -185,6 +194,7 @@ public class QuizzActivity extends AppCompatActivity {
 
         handleUserAnswer();
 
+        // hide submit button to show next button instead
         view.setVisibility(View.GONE);
         final Button nextQuestionButton =  findViewById(R.id.button_next_question);
         nextQuestionButton.setVisibility(View.VISIBLE);
@@ -194,7 +204,7 @@ public class QuizzActivity extends AppCompatActivity {
         }
     }
 
-    public void nextQuestion(View view) {
+    public void onNextQuestion(View view) {
         QuizzProgressBarItem currentProgressBarItem = progressBarItems.get(currentQuestionNumber);
         currentProgressBarItem.setIsCurrent(false);
 
@@ -209,9 +219,9 @@ public class QuizzActivity extends AppCompatActivity {
         currentProgressBarItem = progressBarItems.get(currentQuestionNumber);
         currentProgressBarItem.setIsCurrent(true);
 
+        // hide next button
         view.setVisibility(View.GONE);
-        final Button submitButton =  findViewById(R.id.button_submit_answer);
-        submitButton.setVisibility(View.VISIBLE);
+        disableSubmitButton();
 
         resumeStopwatch();
     }
@@ -222,52 +232,71 @@ public class QuizzActivity extends AppCompatActivity {
         String userAnswer = "";
         boolean isCorrect = false;
 
+        // update the options status
         for (QuizzOptionCard option : options) {
             final boolean isOptionCorrect = option.getAnswerOption().equals(currentQuestion.getAnswer());
             if (option.getIsSelected()) {
                 userAnswer = option.getAnswerOption();
                 isCorrect = isOptionCorrect;
+                if(isCorrect) {
+                    option.setResultStatus(QuizzOptionStatus.correct);
+                    break; // there can only be one selected option
+                } else {
+                    option.setResultStatus(QuizzOptionStatus.wrong);
+                }
             } else if (isOptionCorrect) {
-                option.setResultStatus(1);
-            }
-        }
-
-        if(selectedOption != null) {
-            if(isCorrect) {
-                selectedOption.setResultStatus(1);
-            } else {
-                selectedOption.setResultStatus(2);
+                option.setResultStatus(QuizzOptionStatus.correct);
             }
         }
 
         final Answer answer = new Answer(currentQuestion, userAnswer, isCorrect, currentQuestionTimeSpend);
         answers.add(answer);
 
+        // update progress  bar
         final QuizzProgressBarItem currentProgressBarItem = progressBarItems.get(currentQuestionNumber);
-        currentProgressBarItem.setStatus(isCorrect ? 1 : 2);
+        currentProgressBarItem.setStatus(isCorrect
+                        ? QuizzOptionStatus.correct
+                        : QuizzOptionStatus.wrong
+        );
     }
 
     private void updateViewWithCurrentQuestion() {
-        selectedOption = null;
-
         final TextView progressText = findViewById(R.id.progress_text);
         progressText.setText((currentQuestionNumber + 1) + " / " + questions.size());
 
-        final TextView textView = findViewById(R.id.textView);
-        textView.setText(currentQuestion.getPrompt());
+        final TextView questionTextView = findViewById(R.id.textView);
+        questionTextView.setText(currentQuestion.getPrompt());
 
+        // reset the options state and set the new options
         final QuizzOptionCard[] options = getQuizzOptions();
+
+        // shuffle the options so that they are not always in the same order
+        Collections.shuffle(Arrays.asList(options));
 
         for(int i = 0; i < options.length; ++i) {
             final QuizzOptionCard option = options[i];
             option.setIsSelected(false);
-            option.setResultStatus(0);
+            option.setResultStatus(QuizzOptionStatus.notAnswered);
             option.setAnswerOption(currentQuestion.getOption(i + 1));
         }
     }
 
+    private void enableSubmitButton() {
+        final Button submitButton =  findViewById(R.id.button_submit_answer);
+        submitButton.setAlpha(1.0f);
+        submitButton.setClickable(true);
+    }
+
+    private void disableSubmitButton() {
+        final Button submitButton =  findViewById(R.id.button_submit_answer);
+        submitButton.setAlpha(0.5f);
+        submitButton.setClickable(false);
+        submitButton.setVisibility(View.VISIBLE);
+    }
+
     private void navigateToScore() {
         Intent intent = new Intent(this, ScoreActivity.class);
+        ResourceUtils.getColor(this, R.color.md_theme_primaryContainer);
         intent.putExtra("answers", answers);
         startActivity(intent);
         finish();

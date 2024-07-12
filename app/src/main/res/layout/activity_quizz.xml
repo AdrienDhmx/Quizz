@@ -127,7 +127,7 @@
                 android:gravity="center"
                 android:minWidth="120dp"
                 android:text="@string/button_next_question"
-                android:onClick="nextQuestion"
+                android:onClick="onNextQuestion"
                 android:theme="@style/PrimaryElevatedButton"
                 android:visibility="gone"/>
 

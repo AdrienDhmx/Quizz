@@ -13,18 +13,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class SharedPreferencesUtils {
-
     private static final String sharedPreferencesKey = "QUIZZ";
-
-    public static String isDarkModeKey = "isDarkMode";
-    public static String usernameKey = "username";
-
-    public static String currentQuizzQuestionsKey = "currentQuizzQuestions";
-    public static String currentQuizzAnswersKey = "currentQuizzAnswers";
-
-    public static String bestScoreBaseKey = "bestScores_";
-
-    public static String isImpossibleQuizzUnlocked = "isImpossibleQuizzUnlocked";
 
     public static SharedPreferences getSharedPreferences(Context context) {
         return context.getSharedPreferences(sharedPreferencesKey, Context.MODE_PRIVATE);

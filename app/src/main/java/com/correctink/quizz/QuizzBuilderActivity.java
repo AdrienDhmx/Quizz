@@ -16,10 +16,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.correctink.quizz.enums.SharedPreferencesKeys;
 import com.correctink.quizz.models.Question;
 import com.correctink.quizz.repositories.QuestionRepository;
+import com.correctink.quizz.utils.ResourceUtils;
 import com.correctink.quizz.utils.SharedPreferencesUtils;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
 
@@ -45,11 +51,16 @@ public class QuizzBuilderActivity extends AppCompatActivity {
         navBackButton.setIcon(getDrawable(R.drawable.arrow_back_icon));
         navBackButton.setIconSize(80);
 
-        final boolean hasImpossibleDifficulty = SharedPreferencesUtils.getBoolean(this, SharedPreferencesUtils.isImpossibleQuizzUnlocked, false);
+        final boolean hasImpossibleDifficulty = SharedPreferencesUtils.getBoolean(this, SharedPreferencesKeys.isImpossibleQuizzUnlocked.key, false);
         if(hasImpossibleDifficulty) {
             final Button impossibleQuizzButton = findViewById(R.id.impossible_difficulty_button);
             impossibleQuizzButton.setVisibility(View.VISIBLE);
         }
+
+
+        final String username = SharedPreferencesUtils.getString(this, SharedPreferencesKeys.username.key, "");
+        final TextInputEditText usernameTextInput = findViewById(R.id.username_input);
+        usernameTextInput.setText(username);
 
         questionRepository = QuestionRepository.getInstance();
         final ArrayList<Question> allQuestions = questionRepository.getAllQuestions(this);
@@ -99,9 +110,21 @@ public class QuizzBuilderActivity extends AppCompatActivity {
     }
 
     public void startQuizz(View view) {
+        final TextInputEditText usernameTextInput = findViewById(R.id.username_input);
+        final String player = usernameTextInput.getText().toString();
+
+        if(player.trim().isEmpty()) {
+            final TextInputLayout usernameTextInputLayout = findViewById(R.id.username_input_layout);
+            usernameTextInputLayout.setError(getText(R.string.player_name_required_message));
+            return;
+        }
+        SharedPreferencesUtils.setString(this, SharedPreferencesKeys.username.key, player);
+
+
         final RadioGroup difficultyRadioGroup = findViewById(R.id.difficulty_radio_group);
         final RadioButton selectedRadioButton = findViewById(difficultyRadioGroup.getCheckedRadioButtonId());
         final String selectedDifficulty = selectedRadioButton.getText().toString();
+
 
         final Intent intent = new Intent(this, QuizzActivity.class);
         final ArrayList<Question> questions = questionRepository

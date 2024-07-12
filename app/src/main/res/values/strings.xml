@@ -17,6 +17,7 @@
     <string name="button_save_username">Save</string>
 
     <string name="input_hint_username">Username</string>
+    <string name="input_hint_player">Player</string>
 
     <string name="score_title">Your score</string>
     <string name="user_answer_hint">Your answer</string>
@@ -50,4 +51,5 @@
     <string name="best_scores_empty_title">Your best scores will appear here !</string>
 
     <string name="quizz_option_card_icon_description">The icon representing the result status of the card.</string>
+    <string name="player_name_required_message">The name of the player is required !</string>
 </resources>

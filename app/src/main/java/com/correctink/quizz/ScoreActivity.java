@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.correctink.quizz.adapters.ScoreAdapter;
+import com.correctink.quizz.enums.SharedPreferencesKeys;
 import com.correctink.quizz.models.Answer;
 import com.correctink.quizz.models.QuizzScore;
 import com.correctink.quizz.utils.ArrayListUtils;
@@ -45,8 +46,8 @@ public class ScoreActivity extends AppCompatActivity {
             return insets;
         });
 
-        SharedPreferencesUtils.removeKey(this, SharedPreferencesUtils.currentQuizzQuestionsKey);
-        SharedPreferencesUtils.removeKey(this, SharedPreferencesUtils.currentQuizzAnswersKey);
+        SharedPreferencesUtils.removeKey(this, SharedPreferencesKeys.currentQuizzQuestions.key);
+        SharedPreferencesUtils.removeKey(this, SharedPreferencesKeys.currentQuizzAnswers.key);
 
         final ArrayList<Object> tempAnswerList = (ArrayList<Object>)getIntent().getSerializableExtra("answers");
         answers = ArrayListUtils.mapTo(tempAnswerList, (o) -> (Answer)o);
@@ -93,7 +94,7 @@ public class ScoreActivity extends AppCompatActivity {
 
         float finalScore = percentageCorrectAnswers * difficultyScoreMultiplier * questionQuantityMultiplier * timeSpendMultiplier;
 
-        final String username = SharedPreferencesUtils.getString(this, SharedPreferencesUtils.usernameKey, "");
+        final String username = SharedPreferencesUtils.getString(this, SharedPreferencesKeys.username.key, "");
         score = new QuizzScore(username, finalScore, correctAnswers.size(), answers.size(), quizzDifficulty, totalTimeSpend);
 
         // update the view
@@ -128,7 +129,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private void updateBestScores() {
-        final String bestScoresKey = SharedPreferencesUtils.bestScoreBaseKey + score.getDifficulty();
+        final String bestScoresKey = SharedPreferencesKeys.bestScoreBase.key + score.getDifficulty();
         ArrayList<QuizzScore> bestScores = SharedPreferencesUtils.getBestScores(this, bestScoresKey);
 
         if (bestScores.isEmpty()) {
@@ -168,15 +169,15 @@ public class ScoreActivity extends AppCompatActivity {
 
         final RecyclerView recyclerView = findViewById(R.id.recycler_view_scores);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        final ScoreAdapter scoreAdapter = new ScoreAdapter(this, bestScores, score.getDate());
+        final ScoreAdapter scoreAdapter = new ScoreAdapter(this, bestScores, score);
         recyclerView.setAdapter(scoreAdapter);
 
         if(score.getDifficulty().equals(getText(R.string.difficulty_hard).toString())
-                && score.getFinalScore() > 12) {
-            boolean hasUnlockedImpossibleQuizz = SharedPreferencesUtils.getBoolean(this, SharedPreferencesUtils.isImpossibleQuizzUnlocked, false);
+                && score.getFinalScore() > 8) {
+            boolean hasUnlockedImpossibleQuizz = SharedPreferencesUtils.getBoolean(this, SharedPreferencesKeys.isImpossibleQuizzUnlocked.key, false);
             CharSequence congratsMessage;
             if(!hasUnlockedImpossibleQuizz) {
-                SharedPreferencesUtils.setBoolean(this, SharedPreferencesUtils.isImpossibleQuizzUnlocked, true);
+                SharedPreferencesUtils.setBoolean(this, SharedPreferencesKeys.isImpossibleQuizzUnlocked.key, true);
                 congratsMessage = getText(R.string.result_message_impossible_quizz_unlocked);
             } else {
                 congratsMessage = getText(R.string.result_message_incredible_score);

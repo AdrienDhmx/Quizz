@@ -65,6 +65,20 @@ public class QuizzScore implements Serializable {
         return getDate() + " -> " + getFinalScore() + " (" + getDifficulty() + ")";
     }
 
+    @Override
+    public boolean equals(Object other) {
+        if(other == null || other.getClass() != this.getClass()) {
+            return false;
+        }
+
+        final QuizzScore otherScore = (QuizzScore)other;
+        return otherScore.getDate().equals(getDate())
+                && otherScore.getFinalScore() == getFinalScore()
+                && otherScore.getTotalTimeSpend() == getTotalTimeSpend()
+                && otherScore.getPlayerName().equals(getPlayerName())
+                && otherScore.getDifficulty().equals(getDifficulty());
+    }
+
     public long getTotalTimeSpend() {
         return totalTimeSpend;
     }

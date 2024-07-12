@@ -443,7 +443,7 @@
         <item name="3">Qin Shi Huang</item>
         <item name="4">Zhu Yuanzhang</item>
         <item name="prompt">Quel événement a déclenché le début de la Révolution française en 1789 ?</item>
-        <item name="answer">Prise de la Bastille</item>
+        <item name="answer">Serment du Jeu de paume</item>
         <item name="category">Histoire</item>
         <item name="difficulty">Difficile</item>
         <item name="1">Serment du Jeu de paume</item>
@@ -602,14 +602,6 @@
         <item name="2">Fluorescence</item>
         <item name="3">Incandescence</item>
         <item name="4">Phosphorescence</item>
-        <item name="prompt">Quel est le processus par lequel l\'eau se déplace à travers les plantes, des racines aux feuilles ?</item>
-        <item name="answer">Transpiration</item>
-        <item name="category">Science</item>
-        <item name="difficulty">Difficile</item>
-        <item name="1">Photosynthèse</item>
-        <item name="2">Respiration</item>
-        <item name="3">Absorption</item>
-        <item name="4">Transpiration</item>
         <item name="prompt">Quelle est la couche de l\'atmosphère terrestre qui contient la couche d\'ozone ?</item>
         <item name="answer">Stratosphère</item>
         <item name="category">Science</item>

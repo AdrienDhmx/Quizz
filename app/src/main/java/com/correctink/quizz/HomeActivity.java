@@ -1,11 +1,8 @@
 package com.correctink.quizz;
 
-import android.app.LocaleManager;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.os.LocaleList;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.correctink.quizz.adapters.ScoreAdapter;
+import com.correctink.quizz.enums.SharedPreferencesKeys;
 import com.correctink.quizz.models.Answer;
 import com.correctink.quizz.models.Question;
 import com.correctink.quizz.models.QuizzScore;
@@ -60,15 +58,13 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         setLanguageFromPreferences();
-        isDarkMode = SharedPreferencesUtils.getBoolean(this, SharedPreferencesUtils.isDarkModeKey, false);
+        isDarkMode = SharedPreferencesUtils.getBoolean(this, SharedPreferencesKeys.isDarkMode.key, false);
 
         if(themeButton == null) {
             themeButton = findViewById(R.id.theme_mode_switch);
-            themeButton.setIconSize(80);
         }
 
         final MaterialButton languageButton = findViewById(R.id.language_switch);
-        languageButton.setIconSize(80);
         languageButton.setIcon(getDrawable(R.drawable.translate_icon));
 
         if (isDarkMode) {
@@ -84,7 +80,7 @@ public class HomeActivity extends AppCompatActivity {
         editUsernameButton.setIcon(getDrawable(R.drawable.edit_icon));
         editUsernameButton.setIconTint(ColorStateList.valueOf(getColor(R.color.md_theme_onBackground)));
 
-        final String username = SharedPreferencesUtils.getString(this, SharedPreferencesUtils.usernameKey, "");
+        final String username = SharedPreferencesUtils.getString(this, SharedPreferencesKeys.username.key, "");
         updateWelcomeText(username);
 
         updateBestScores();
@@ -92,9 +88,10 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void updateBestScores() {
-        final String bestScoreEasyKey = SharedPreferencesUtils.bestScoreBaseKey + getText(R.string.difficulty_easy);
-        final String bestScoreHardKey = SharedPreferencesUtils.bestScoreBaseKey + getText(R.string.difficulty_hard);
-        final String bestScoreImpossibleKey = SharedPreferencesUtils.bestScoreBaseKey + getText(R.string.difficulty_impossible);
+        final String baseBestScoreKey = SharedPreferencesKeys.bestScoreBase.key;
+        final String bestScoreEasyKey = baseBestScoreKey + getText(R.string.difficulty_easy);
+        final String bestScoreHardKey = baseBestScoreKey + getText(R.string.difficulty_hard);
+        final String bestScoreImpossibleKey = baseBestScoreKey + getText(R.string.difficulty_impossible);
 
         ArrayList<QuizzScore> bestScores = SharedPreferencesUtils.getBestScores(this, bestScoreEasyKey);
         bestScores.addAll(SharedPreferencesUtils.getBestScores(this, bestScoreHardKey));
@@ -123,8 +120,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private void updateResumeQuizzButton() {
         // try to get current quizz questions and answers
-        currentQuizzQuestions = SharedPreferencesUtils.getQuestions(this, SharedPreferencesUtils.currentQuizzQuestionsKey);
-        currentQuizzAnswers = SharedPreferencesUtils.getAnswers(this, SharedPreferencesUtils.currentQuizzAnswersKey);
+        currentQuizzQuestions = SharedPreferencesUtils.getQuestions(this, SharedPreferencesKeys.currentQuizzQuestions.key);
+        currentQuizzAnswers = SharedPreferencesUtils.getAnswers(this, SharedPreferencesKeys.currentQuizzAnswers.key);
         if(currentQuizzQuestions == null || currentQuizzQuestions.isEmpty()) {
             // no quizz started, hide the resume quizz button
             findViewById(R.id.button_resume_quizz).setVisibility(View.GONE);
@@ -159,7 +156,7 @@ public class HomeActivity extends AppCompatActivity {
         saveUsernameButton.setOnClickListener((v) -> {
             final TextInputEditText usernameInput = sheet.findViewById(R.id.username_input);
             final String username = usernameInput.getText().toString();
-            SharedPreferencesUtils.setString(this, SharedPreferencesUtils.usernameKey, username);
+            SharedPreferencesUtils.setString(this, SharedPreferencesKeys.username.key, username);
             updateWelcomeText(username);
             sheet.dismiss();
         });
@@ -167,7 +164,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void toggleTheme(View view) {
         isDarkMode = !isDarkMode;
-        SharedPreferencesUtils.setBoolean(this, SharedPreferencesUtils.isDarkModeKey, isDarkMode);
+        SharedPreferencesUtils.setBoolean(this, SharedPreferencesKeys.isDarkMode.key, isDarkMode);
 
         if (isDarkMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -177,7 +174,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void toggleLanguage(View view) {
-        String currentLanguage = SharedPreferencesUtils.getString(this, "currentLanguage", "en");
+        String currentLanguage = SharedPreferencesUtils.getString(this, SharedPreferencesKeys.currentLanguage.key, "en");
 
         for(int i = 0; i < supportedLocalesTag.length; ++i) {
             if(supportedLocalesTag[i].equals(currentLanguage)) {
@@ -188,14 +185,14 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         }
-        SharedPreferencesUtils.setString(this, "currentLanguage", currentLanguage);
+        SharedPreferencesUtils.setString(this, SharedPreferencesKeys.currentLanguage.key, currentLanguage);
         AppCompatDelegate.setApplicationLocales(
                 LocaleListCompat.create(Locale.forLanguageTag(currentLanguage))
         );
     }
 
     private void setLanguageFromPreferences() {
-        String languageTag = SharedPreferencesUtils.getString(this, "currentLanguage", "en");
+        String languageTag = SharedPreferencesUtils.getString(this, SharedPreferencesKeys.currentLanguage.key, "en");
         AppCompatDelegate.setApplicationLocales(
                 LocaleListCompat.create(Locale.forLanguageTag(languageTag))
         );

@@ -17,6 +17,12 @@ public class ResourceUtils {
         return String.format(context.getText(id).toString(), parameter);
     }
 
+    public static int getColor(Context context, int id) {
+        final Resources res = context.getResources();
+        final Resources.Theme currentTheme = context.getTheme();
+       return res.getColor(id, currentTheme);
+    }
+
     public static ArrayList<Question> getAllQuestions(Context context) {
         final ArrayList<Question> questions = new ArrayList<>();
         Resources res = context.getResources();

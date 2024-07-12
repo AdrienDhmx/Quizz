@@ -37,12 +37,12 @@
     <string name="result_time_spend_multiplier">Multiplicateur de vitesse : %.2f</string>
 
     <string name="result_message_perfect_score">Félicitations %! Vous avez obtenu un score parfait !</string>
-    <string name="result_message_great_score">Bravo %! Vous avez bien répondu à la plupart des questions !</string>
+    <string name="result_message_great_score">Bravo %! Vous avez bien répondu à presque toutes les questions !</string>
     <string name="result_message_good_score">Bon effort %! Vous avez bien répondu à plus de la moitié des questions !</string>
-    <string name="result_message_ok_score">Pas mal %! Vous avez bien répondu à certaines questions. Continuez à pratiquer !</string>
+    <string name="result_message_ok_score">Pas mal %! Vous avez bien répondu à certaines questions. Continuez à jouer !</string>
     <string name="result_message_bad_score">Ne vous inquiétez pas %, vous ferez mieux la prochaine fois ! Continuez à apprendre et essayez encore.</string>
 
-    <string name="result_message_incredible_score">Travail fantastique ! Vous avez obtenu un score exceptionnel !</string>
+    <string name="result_message_incredible_score">Félicitations ! Vous avez obtenu un score exceptionnel !</string>
     <string name="result_message_impossible_quizz_unlocked">Félicitations ! Vous avez débloqué la difficulté impossible !</string>
 
     <string name="best_scores_difficulty_title">Meilleurs scores en difficulté %</string>
@@ -50,4 +50,6 @@
     <string name="best_scores_empty_title">Vos meilleurs scores apparaîtront ici !</string>
 
     <string name="quizz_option_card_icon_description">L\'icône représentant l\'état du résultat de la carte.</string>
+    <string name="player_name_required_message">Le nom du joueur est obligatoire !</string>
+    <string name="input_hint_player">Joueur</string>
 </resources>

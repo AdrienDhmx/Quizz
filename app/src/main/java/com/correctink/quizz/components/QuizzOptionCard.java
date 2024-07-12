@@ -13,10 +13,12 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 
 import com.correctink.quizz.R;
+import com.correctink.quizz.enums.QuizzOptionStatus;
+import com.correctink.quizz.utils.ResourceUtils;
 
 public class QuizzOptionCard extends CardView {
     private String answerOption = "Option";
-    private int resultStatus = 0;
+    private QuizzOptionStatus resultStatus = QuizzOptionStatus.notAnswered;
     private boolean isSelected = false;
 
     private ImageView iconView;
@@ -43,17 +45,14 @@ public class QuizzOptionCard extends CardView {
         // Load attributes
         final TypedArray a = getContext().obtainStyledAttributes(
                 attrs, R.styleable.quizz_option_card, defStyle, 0);
-
         answerOption = a.getString(
                 R.styleable.quizz_option_card_answerOption);
         isSelected = a.getBoolean(
                 R.styleable.quizz_option_card_isSelected,
                 false);
 
-        resultStatus = a.getInt(
-                R.styleable.quizz_option_card_resultStatus,
-                0);
-
+        final int resultStatusIndex = a.getInt(R.styleable.quizz_option_card_resultStatus,0);
+        resultStatus = QuizzOptionStatus.values()[resultStatusIndex];
         a.recycle();
 
         setRadius(12);
@@ -95,32 +94,29 @@ public class QuizzOptionCard extends CardView {
         }
     }
 
-    public int getResultStatus() {
+    public QuizzOptionStatus getResultStatus() {
         return resultStatus;
     }
 
-    public void setResultStatus(int resultStatus) {
+    public void setResultStatus(QuizzOptionStatus resultStatus) {
         this.resultStatus = resultStatus;
 
-        final Resources res = getResources();
-        final Resources.Theme currentTheme = getContext().getTheme();
 
-        int color = res.getColor(R.color.md_theme_surface, currentTheme);
-        int textColor = res.getColor(R.color.md_theme_onSurface, currentTheme);
+        int color = ResourceUtils.getColor(this.getContext(), R.color.md_theme_surface);
+        int textColor = ResourceUtils.getColor(this.getContext(), R.color.md_theme_onSurface);
         int iconResId = 0;
 
-        if(resultStatus == 1) { // default
-            color = res.getColor(R.color.md_theme_primaryContainer, currentTheme);
-            textColor = res.getColor(R.color.md_theme_onPrimaryContainer, currentTheme);
+        if(resultStatus == QuizzOptionStatus.correct) {
+            color = ResourceUtils.getColor(this.getContext(), R.color.md_theme_primaryContainer);
+            textColor = ResourceUtils.getColor(this.getContext(), R.color.md_theme_onPrimaryContainer);
             iconResId = R.drawable.check_icon;
-        } else if (resultStatus == 2) {
-            color = res.getColor(R.color.md_theme_errorContainer, currentTheme);
-            textColor = res.getColor(R.color.md_theme_onErrorContainer, currentTheme);
+        } else if (resultStatus == QuizzOptionStatus.wrong) {
+            color = ResourceUtils.getColor(this.getContext(), R.color.md_theme_errorContainer);
+            textColor = ResourceUtils.getColor(this.getContext(), R.color.md_theme_onErrorContainer);
             iconResId = R.drawable.close_icon;
         }
 
         setCardBackgroundColor(color);
-
         textView.setTextColor(textColor);
 
         if(iconResId != 0) {

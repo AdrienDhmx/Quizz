@@ -23,7 +23,6 @@ public class QuestionRepository {
 
     private ArrayList<Question> cachedQuestions;
     private ArrayList<String> cachedCategories;
-    private ArrayList<String> cachedDifficulties;
 
     public QuestionRepository() {}
 
@@ -43,24 +42,6 @@ public class QuestionRepository {
                     .collect(Collectors.toCollection(ArrayList::new));
         }
         return cachedCategories;
-    }
-
-    public ArrayList<String> getAllDifficulties(Activity activity) {
-        if(cachedDifficulties == null) {
-            cachedDifficulties = ArrayListUtils
-                    .mapTo(getAllQuestions(activity), Question::getDifficulty)
-                    .stream()
-                    .distinct()
-                    .collect(Collectors.toCollection(ArrayList::new));
-        }
-        return cachedDifficulties;
-    }
-
-    public ArrayList<Question> queryQuestionsByCategory(Activity activity, String category) {
-        return getAllQuestions(activity)
-                .stream()
-                .filter((q) -> q.getCategory().equals(category))
-                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     public ArrayList<Question> queryQuestions(Activity activity, String category, String difficulty, Integer number) {
